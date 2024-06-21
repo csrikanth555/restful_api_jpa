@@ -1,0 +1,42 @@
+POST
+http://localhost:8080/user
+{
+    "userId": 4,
+    "firstName": "SAI",
+    "lastName": "KUMAR",
+    "userType": "E",
+    "startDate": null
+}
+
+
+
+
+CREATE TABLE employee
+(
+  id integer NOT NULL,
+  name character varying(255),
+  salary integer NOT NULL,
+  designation character varying(255)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE employee
+ ;
+
+  
+  
+  CREATE TABLE user_details
+(
+  id integer NOT NULL,
+  first_name character varying(100) NOT NULL,
+  last_name character varying(100) NOT NULL,
+  user_type character varying(100) NOT NULL,
+  start_date date,
+  CONSTRAINT user_details_pkey PRIMARY KEY (first_name)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE user_details
+ ;

@@ -1,0 +1,19 @@
+<form id="emp_form" th:action="@{/emp/saveEmp}" method="post"
+	th:object="${objEmployee}">
+	<input type="hidden" id="empId" name="empId" th:value="*{empId}"></input>
+	<div class="form-group">
+		<label th:text="empName"></label> <input type="text"
+			class="form-control" id="empName" name="empName"
+			th:value="*{empName}" required="required" th:minlength="1"
+			th:maxlength="100">
+	</div>
+	<div class="form-group">
+		<label th:text="empSalary"></label> <input type="text"
+			class="form-control" id="empSalary" name="empSalary"
+			th:value="*{empSalary}" required="required" th:minlength="1"
+			th:maxlength="100">
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-default" th:text="save"></button>
+	</div>
+</form>

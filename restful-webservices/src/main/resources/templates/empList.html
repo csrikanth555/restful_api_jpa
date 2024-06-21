@@ -1,0 +1,24 @@
+<div >
+        <div >
+            <h2>Employees</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Salary</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr th:each="empObj : ${employeesList}">
+                    <td th:text="${empObj.empName}"></td>
+                    <td th:text="${empObj.empSalary}"></td>
+                    <td><a th:href="@{/emp/editEmp/{id}(id=${empObj.empId})}">Edit</a></td>
+                    <td><a th:href="@{/emp/deleteEmp/{id}(id=${empObj.empId})}">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>      
+    <p><a th:href="@{/emp/addEmp}" >Add a new Employee</a></p>
+</div>
